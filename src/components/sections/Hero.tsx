@@ -22,7 +22,7 @@ const Hero = () => {
               Atikur Rahman
             </h1>
             <p className="text-xl sm:text-2xl lg:text-3xl text-textSecondary mb-6">
-              Full Stack Developer
+              Web Developer
             </p>
             <p className="text-base sm:text-lg text-textSecondary max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
               Building industry-level web applications with clean architecture and production-ready code.
