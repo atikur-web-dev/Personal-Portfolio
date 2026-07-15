@@ -26,11 +26,11 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-semibold mb-4 text-accent">
-              MERN Stack Developer
+              Backend Developer
             </h3>
             <p className="text-textSecondary mb-4 leading-relaxed">
               CSE graduate from IUBAT with a passion for building modern web applications. 
-              Specialized in the MERN ecosystem with TypeScript and Tailwind CSS.
+              Specialized in the PERN ecosystem with TypeScript and Tailwind CSS.
             </p>
             <p className="text-textSecondary mb-4 leading-relaxed">
               I write production-ready code following industry standards — clean folder 
