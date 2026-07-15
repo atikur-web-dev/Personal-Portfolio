@@ -22,25 +22,25 @@ const Projects = (): React.ReactElement => {
 
   return (
     <>
-      <section id="projects" className="py-20">
-        <div className="container-custom">
+      <section id="projects" className="py-20 lg:py-24">
+        <div className="container-custom w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-12 lg:mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="section-heading">
               Featured <span className="text-accent">Projects</span>
             </h2>
-            <div className="w-20 h-1 bg-accent mx-auto rounded-full"></div>
-            <p className="text-textSecondary mt-4 max-w-2xl mx-auto">
+            <div className="section-divider"></div>
+            <p className="text-textSecondary text-base mt-4 max-w-2xl mx-auto">
               Industry-level projects built with modern technologies and production standards
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
             {projectsData.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -52,7 +52,7 @@ const Projects = (): React.ReactElement => {
               >
                 {/* Project Image */}
                 {project.imageUrl && (
-                  <div className="w-full h-48 overflow-hidden">
+                  <div className="w-full h-52 sm:h-56 overflow-hidden">
                     <img
                       src={project.imageUrl}
                       alt={project.title}
@@ -61,17 +61,17 @@ const Projects = (): React.ReactElement => {
                   </div>
                 )}
                 
-                <div className="p-6">
+                <div className="p-6 lg:p-7">
                   {/* Header */}
                   <div className="flex justify-between items-start mb-4">
                     <Code2 className="w-10 h-10 text-accent" />
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                  <h3 className="text-xl lg:text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-textSecondary text-sm mb-4 leading-relaxed">
+                  <p className="text-textSecondary text-base mb-5 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -80,7 +80,7 @@ const Projects = (): React.ReactElement => {
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs bg-secondary/40 px-2 py-1 rounded-md text-textSecondary"
+                        className="text-xs bg-secondary/40 px-3 py-1.5 rounded-md text-textSecondary"
                       >
                         {tech}
                       </span>

@@ -14,34 +14,60 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-size: 16px;
   }
   
   body {
     background-color: #0F172A;
     color: #F9FAFB;
+    font-size: 1rem;
+    line-height: 1.65;
   }
 }
 
 @layer components {
   .container-custom {
-    max-width: 72rem;
+    width: 100%;
+    max-width: 85rem;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   
   @media (min-width: 640px) {
     .container-custom {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
+      padding-left: 1.75rem;
+      padding-right: 1.75rem;
     }
   }
   
   @media (min-width: 1024px) {
     .container-custom {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
+  }
+
+  @media (min-width: 1280px) {
+    .container-custom {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  .section-heading {
+    font-size: clamp(1.875rem, 3vw, 2.75rem);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-divider {
+    width: 4rem;
+    height: 0.2rem;
+    background-color: #10B981;
+    border-radius: 9999px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

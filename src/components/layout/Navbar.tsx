@@ -28,9 +28,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container-custom">
-        <div className="flex justify-between items-center h-16">
-          <a href="#home" className="flex items-center gap-2 group">
-            <Code2 className="w-6 h-6 text-accent" />
+        <div className="flex justify-between items-center h-[4.25rem]">
+          <a href="#home" className="flex items-center gap-2.5 group">
+            <Code2 className="w-7 h-7 text-accent" />
             <span className="text-xl font-semibold tracking-tight">
               A.<span className="text-accent">R</span>
             </span>
@@ -42,7 +42,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-textSecondary hover:text-accent transition-colors duration-200 text-sm font-medium"
+                className="text-textSecondary hover:text-accent transition-colors duration-200 text-base font-medium"
               >
                 {link.name}
               </a>
@@ -66,7 +66,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block py-3 text-textSecondary hover:text-accent transition-colors duration-200"
+                className="block py-3 text-base text-textSecondary hover:text-accent transition-colors duration-200"
               >
                 {link.name}
               </a>

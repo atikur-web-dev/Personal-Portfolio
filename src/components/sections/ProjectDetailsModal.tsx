@@ -13,15 +13,9 @@ import {
   Sparkles,
   GitBranch,
   Code2,
-  Server,
   Globe,
   Lock,
-  Clock,
   BarChart3,
-  Users,
-  Mail,
-  FileText,
-  Link2,
   ArrowRight,
   CreditCard
 } from 'lucide-react';
@@ -54,18 +48,18 @@ const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetailsModalPr
   // Get feature icon based on content
   const getFeatureIcon = (feature: string) => {
     if (feature.includes('Intelligent') || feature.includes('AI') || feature.includes('Generation')) 
-      return <Sparkles className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />;
+      return <Sparkles className="w-5 h-5 text-accent shrink-0 mt-0.5" />;
     if (feature.includes('Authentication') || feature.includes('Security') || feature.includes('OAuth')) 
-      return <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />;
+      return <Shield className="w-5 h-5 text-accent shrink-0 mt-0.5" />;
     if (feature.includes('Credit') || feature.includes('Transaction') || feature.includes('Refund')) 
-      return <CreditCard className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />;
+      return <CreditCard className="w-5 h-5 text-accent shrink-0 mt-0.5" />;
     if (feature.includes('Payment') || feature.includes('Verification') || feature.includes('SSLCommerz')) 
-      return <Lock className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />;
+      return <Lock className="w-5 h-5 text-accent shrink-0 mt-0.5" />;
     if (feature.includes('Rate') || feature.includes('Performance') || feature.includes('Hardening')) 
-      return <BarChart3 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />;
+      return <BarChart3 className="w-5 h-5 text-accent shrink-00 mt-0.5" />;
     if (feature.includes('Database') || feature.includes('Redis')) 
-      return <Database className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />;
-    return <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />;
+      return <Database className="w-5 h-5 text-accent shrink-0 mt-0.5" />;
+    return <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />;
   };
 
   return (
@@ -114,7 +108,7 @@ const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetailsModalPr
                     <Rocket className="w-5 h-5 text-accent" />
                     <h3 className="text-lg font-semibold text-accent">Project Overview</h3>
                   </div>
-                  <p className="text-textSecondary leading-relaxed pl-7">
+                  <p className="text-textSecondary text-base leading-relaxed pl-7">
                     {details.overview}
                   </p>
                 </div>
@@ -163,7 +157,7 @@ const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetailsModalPr
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/40 hover:bg-secondary/60 rounded-lg transition-colors group"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary/40 hover:bg-secondary/60 rounded-lg transition-colors group"
                   >
                     <GitBranch className="w-4 h-4" />
                     <span className="text-sm">View on GitHub</span>
@@ -174,7 +168,7 @@ const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetailsModalPr
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 hover:bg-accent/30 rounded-lg transition-colors group"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent/20 hover:bg-accent/30 rounded-lg transition-colors group"
                     >
                       <Globe className="w-4 h-4 text-accent" />
                       <span className="text-sm text-accent">Live Demo</span>

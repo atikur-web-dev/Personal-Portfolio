@@ -19,20 +19,20 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container-custom">
+    <section id="contact" className="py-20 lg:py-24">
+      <div className="container-custom w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-12 lg:mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="section-heading">
             Get In <span className="text-accent">Touch</span>
           </h2>
-          <div className="w-20 h-1 bg-accent mx-auto rounded-full"></div>
-          <p className="text-textSecondary mt-4">
+          <div className="section-divider"></div>
+          <p className="text-textSecondary text-base mt-4">
             Let's connect and discuss opportunities
           </p>
         </motion.div>
@@ -42,14 +42,14 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto"
+          className="max-w-4xl mx-auto w-full"
         >
-          <div className="bg-primary/40 rounded-xl border border-secondary/30 p-8 space-y-6">
+          <div className="bg-primary/40 rounded-xl border border-secondary/30 p-7 lg:p-8 space-y-6">
             {/* Email */}
-            <div className="flex items-center justify-between p-4 bg-secondary/20 rounded-lg group">
+            <div className="flex items-center justify-between p-4 lg:p-5 bg-secondary/20 rounded-lg group">
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-accent" />
-                <span className="text-textPrimary">atikurrahman160313@gmail.com</span>
+                <Mail className="w-6 h-6 text-accent shrink-0" />
+                <span className="text-textPrimary text-base lg:text-lg">atikurrahman160313@gmail.com</span>
               </div>
               <button
                 onClick={() => copyToClipboard('atikurrahman160313@gmail.com', 'email')}
@@ -64,10 +64,10 @@ const Contact = () => {
             </div>
 
             {/* Phone */}
-            <div className="flex items-center justify-between p-4 bg-secondary/20 rounded-lg group">
+            <div className="flex items-center justify-between p-4 lg:p-5 bg-secondary/20 rounded-lg group">
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-accent" />
-                <span className="text-textPrimary">01943697606</span>
+                <Phone className="w-6 h-6 text-accent shrink-0" />
+                <span className="text-textPrimary text-base lg:text-lg">01943697606</span>
               </div>
               <button
                 onClick={() => copyToClipboard('01943697606', 'phone')}
@@ -92,29 +92,29 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex justify-center gap-6 pt-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-2">
               <a
                 href="https://github.com/atikur-web-dev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 p-3 rounded-lg bg-secondary/20 hover:bg-accent/20 transition-all duration-200 group"
+                className="flex items-center justify-center gap-2 p-3.5 rounded-lg bg-secondary/20 hover:bg-accent/20 transition-all duration-200 group"
               >
                 <FaGithub className="w-5 h-5 text-textSecondary group-hover:text-accent" />
-                <span className="text-textSecondary group-hover:text-accent">GitHub</span>
+                <span className="text-base text-textSecondary group-hover:text-accent">GitHub</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/atikur-rahman-0475b4385/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 p-3 rounded-lg bg-secondary/20 hover:bg-accent/20 transition-all duration-200 group"
+                className="flex items-center justify-center gap-2 p-3.5 rounded-lg bg-secondary/20 hover:bg-accent/20 transition-all duration-200 group"
               >
                 <FaLinkedin className="w-5 h-5 text-textSecondary group-hover:text-accent" />
-                <span className="text-textSecondary group-hover:text-accent">LinkedIn</span>
+                <span className="text-base text-textSecondary group-hover:text-accent">LinkedIn</span>
               </a>
             </div>
 
             {/* Copyright */}
-            <div className="text-center pt-6 border-t border-secondary/30 mt-4">
+            <div className="text-center pt-6 border-t border-secondary/30 mt-2">
               <p className="text-textSecondary text-sm">
                 © 2026 Atikur Rahman. All rights reserved.
               </p>
